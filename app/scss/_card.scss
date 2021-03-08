@@ -1,0 +1,64 @@
+.card {
+  width: 45.625rem;
+  height: 17.5rem;
+  background-color: white;
+  border-radius: 7px;
+  display: flex;
+  .card-img > img {
+    width: 285px;
+    height: 280px;
+    border-radius: 7px 0 0 7px;
+  }
+  .archive-data {
+    padding: 2.375rem 2.5rem;
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $veryDarkGrayishBlue;
+      letter-spacing: 0.25px;
+    }
+    .data {
+      color: $desaturatedDarkBlue;
+      letter-spacing: 0.12px;
+    }
+
+    .user-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .profile {
+        display: flex;
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50px;
+        }
+        .user-details {
+          margin-left: 18px;
+          .username {
+            color: $veryDarkGrayishBlue;
+          }
+          .date {
+            color: $desaturatedDarkBlue;
+          }
+        }
+      }
+
+      .share {
+        .btn {
+          border: none;
+          padding: 1rem;
+          border-radius: 100%;
+          background-color: #dde3e9;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+          outline: none;
+          cursor: pointer;
+          z-index: 1;
+          -webkit-transition: all 0.1s;
+          transition: all 0.1s;
+        }
+      }
+    }
+  }
+}

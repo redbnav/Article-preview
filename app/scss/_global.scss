@@ -1,0 +1,11 @@
+body {
+  font-size: $fontSize;
+  font-family: "Manrope", sans-serif;
+  background-color: $lightGrayishBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
