@@ -4,6 +4,8 @@
   background-color: white;
   border-radius: 7px;
   display: flex;
+  position: relative;
+
   .card-img > img {
     width: 285px;
     height: 280px;
@@ -15,14 +17,16 @@
       font-size: 20px;
       font-weight: 500;
       color: $veryDarkGrayishBlue;
-      letter-spacing: 0.25px;
     }
     .data {
       color: $desaturatedDarkBlue;
-      letter-spacing: 0.12px;
     }
 
     .user-container {
+      &:not(:first-child),
+      &:not(:last-child) {
+        margin-top: 20px !important;
+      }
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
@@ -37,6 +41,7 @@
           margin-left: 18px;
           .username {
             color: $veryDarkGrayishBlue;
+            letter-spacing: 0.12px;
           }
           .date {
             color: $desaturatedDarkBlue;
@@ -45,9 +50,11 @@
       }
 
       .share {
+        display: flex;
+        align-items: center;
         .btn {
           border: none;
-          padding: 1rem;
+          padding: 0.6rem;
           border-radius: 100%;
           background-color: #dde3e9;
           -webkit-transition: all 0.2s;
@@ -57,6 +64,52 @@
           z-index: 1;
           -webkit-transition: all 0.1s;
           transition: all 0.1s;
+        }
+      }
+
+      .social-media {
+        position: absolute;
+        display: none;
+        right: -78px;
+        bottom: 95px;
+        padding: 3px 36px;
+        background-color: #48556a;
+        border-radius: 10px;
+        z-index: 3;
+        width: 200px;
+        &::after {
+          content: "";
+          width: 24px;
+          height: 24px;
+          background: #48556a;
+          position: absolute;
+          transform: rotate(45deg);
+          bottom: -12px;
+          z-index: 2;
+          left: calc(50% - 12px);
+        }
+
+        &.active {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        & > p {
+          font-weight: 200;
+          font-size: 13px;
+          line-height: 20px;
+          letter-spacing: 5px;
+          color: #9daec2;
+          text-transform: uppercase;
+        }
+        .social-icons {
+          display: flex;
+          align-items: center;
+          .icon {
+            &:not(:last-child) {
+              padding-right: 12px;
+            }
+          }
         }
       }
     }
