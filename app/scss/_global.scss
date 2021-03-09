@@ -16,3 +16,9 @@ body {
 .md-ltr-space {
   letter-spacing: 0.25px;
 }
+
+@media (max-width: 53.75rem) {
+  .md-ltr-space {
+    letter-spacing: 0.2px;
+  }
+}

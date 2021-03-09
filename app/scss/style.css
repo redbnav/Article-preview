@@ -23,6 +23,12 @@ body {
   letter-spacing: 0.25px;
 }
 
+@media (max-width: 53.75rem) {
+  .md-ltr-space {
+    letter-spacing: 0.2px;
+  }
+}
+
 .card {
   width: 45.625rem;
   height: 17.5rem;
@@ -35,8 +41,8 @@ body {
 }
 
 .card .card-img > img {
-  width: 285px;
-  height: 280px;
+  width: 17.8125rem;
+  height: 17.5rem;
   border-radius: 7px 0 0 7px;
 }
 
@@ -100,6 +106,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 4;
 }
 
 .card .archive-data .user-container .share .btn {
@@ -148,15 +155,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card .archive-data .user-container .social-media > p {
   font-weight: 200;
   font-size: 13px;
   line-height: 20px;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   color: #9daec2;
   text-transform: uppercase;
 }
@@ -172,5 +180,55 @@ body {
 
 .card .archive-data .user-container .social-media .social-icons .icon:not(:last-child) {
   padding-right: 12px;
+}
+
+.card .archive-data .user-container .social-media .share-mobile {
+  display: none;
+}
+
+@media (max-width: 53.75rem) {
+  .card {
+    width: 20.4375rem;
+    height: 31.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card .card-img > img {
+    width: 20.4375rem;
+    height: 12.5rem;
+    border-radius: 7px 7px 0 0;
+  }
+  .card .archive-data {
+    padding: 2.75rem 2rem;
+  }
+  .card .archive-data .title {
+    font-size: 16px;
+  }
+  .card .archive-data .data {
+    -webkit-margin-before: 1.5rem;
+            margin-block-start: 1.5rem;
+  }
+  .card .archive-data .user-container .social-media {
+    right: 0;
+    bottom: 0;
+    padding: 3px 36px;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+    width: 255px;
+    height: 65px;
+  }
+  .card .archive-data .user-container .social-media::after {
+    content: none;
+  }
+  .card .archive-data .user-container .social-media.active {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .card .archive-data .user-container .social-media .social-icons {
+    padding-left: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
